@@ -8,6 +8,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require "config/cmp"
+require "config/gitsigns"
 require "config/lspconfig"
 require "config/nvim-tree"
 require "config/nvim-treesitter"

@@ -50,6 +50,8 @@ return require('packer').startup(function(use)
 
     use "onsails/lspkind-nvim"
 
+    use "lewis6991/gitsigns.nvim"
+
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
