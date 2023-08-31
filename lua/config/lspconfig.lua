@@ -1,12 +1,20 @@
 local path_to_elixirls = vim.fn.expand "~/.elixir-ls/release/language_server.sh"
 
+-- Neovim doesn't support snippets out of the box, so we need to mutate the
+-- capabilities we send to the language server to let them know we want snippets.
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 local lspconfig = require "lspconfig"
 
 lspconfig.pyright.setup {}
+
 lspconfig.tsserver.setup {}
+
 lspconfig.gopls.setup {}
+
 lspconfig.elixirls.setup {
-  cmd = {path_to_elixirls},
+  cmd = { path_to_elixirls },
   capabilities = capabilities,
   settings = {
     elixirLS = {
