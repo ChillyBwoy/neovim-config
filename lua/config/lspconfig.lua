@@ -4,8 +4,8 @@ local lspconfig = require "lspconfig"
 
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
-lspconfig.gopls.setup{}
-lspconfig.elixirls.setup({
+lspconfig.gopls.setup {}
+lspconfig.elixirls.setup {
   cmd = {path_to_elixirls},
   capabilities = capabilities,
   settings = {
@@ -20,5 +20,5 @@ lspconfig.elixirls.setup({
       fetchDeps = false
     }
   }
-})
+}
 

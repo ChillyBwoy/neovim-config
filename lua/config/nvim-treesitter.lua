@@ -1,6 +1,6 @@
 local nvimTreeSitter = require "nvim-treesitter.configs"
 
-nvimTreeSitter.setup({
+nvimTreeSitter.setup {
   ensure_installed = { "elixir", "heex", "eex" }, -- only install parsers for elixir and heex
   -- ensure_installed = "all", -- install parsers for all supported languages
   sync_install = false,
@@ -9,6 +9,5 @@ nvimTreeSitter.setup({
     enable = true,
     disable = { },
   },
-})
-
+}
 

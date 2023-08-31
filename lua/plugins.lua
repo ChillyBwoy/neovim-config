@@ -50,24 +50,22 @@ return require('packer').startup(function(use)
 
     use "onsails/lspkind-nvim"
 
-    -- EOF elixir
-    
     use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
     }
 
     use {
-        'nvim-tree/nvim-tree.lua',
+        "nvim-tree/nvim-tree.lua",
         requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
+            "nvim-tree/nvim-web-devicons", -- optional
         }
     }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
-        require('packer').sync()
+        require("packer").sync()
     end
 end)
 
