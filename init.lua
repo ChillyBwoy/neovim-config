@@ -12,3 +12,4 @@ require "config/gitsigns"
 require "config/lspconfig"
 require "config/nvim-tree"
 require "config/nvim-treesitter"
+
